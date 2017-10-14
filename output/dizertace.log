@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.14)  14 OCT 2017 11:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.14)  14 OCT 2017 11:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1096,15 +1096,15 @@ Kapitola 3.
 
 ]
 No file dizertace.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
 [19
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
  (output/dizertace.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 259.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
 Package rerunfilecheck Info: File `dizertace.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
