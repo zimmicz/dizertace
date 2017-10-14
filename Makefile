@@ -1,6 +1,5 @@
 .PHONY: build
-build: compile push
-	pdflatex --output-directory output dizertace.tex
+build: compile tex push
 
 .PHONY: compile
 compile:
@@ -14,3 +13,7 @@ push:
 	git add .
 	git commit -m "Revision at `date`"
 	git push
+
+.PHONY: tex
+tex:
+	pdflatex --output-directory output dizertace.tex
