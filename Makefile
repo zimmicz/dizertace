@@ -1,4 +1,4 @@
-build: compile push
+build: push compile
 	pdflatex --output-directory output dizertace.tex
 
 compile:
