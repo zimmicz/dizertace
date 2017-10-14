@@ -1,4 +1,4 @@
-build: compile
+build: compile push
 	pdflatex --output-directory output dizertace.tex
 
 compile:
@@ -6,3 +6,8 @@ compile:
 	for src in `find source/markdown/ -type f`; do \
 		pandoc -f markdown -t latex $$src >> source/tex/output.tex ; \
 	done
+
+push:
+	git add .
+	git commit -m "Revision at `date`"
+	git push
