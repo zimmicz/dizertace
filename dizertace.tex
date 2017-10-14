@@ -1,0 +1,258 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sablona Bc+Mgr+RNDr (CZ) pro PriF MU                                                              %%%
+% Autor: Petr Zemanek (zemanekp@math.muni.cz)                                                       %%%
+% Pripominky, dotazy, namety smerujte na diskusni forum: https://is.muni.cz/auth/df/sablona-prif    %%%
+% Typeset in LaTeX-2e                                                                               %%%
+% Verze: 1.9 (4. brezna 2016)                                                                       %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,a4paper,oneside,final]{book} %% PRO JEDNOSTRANNY TISK
+% \documentclass[11pt,a4paper,twoside,final]{book} %% PRO OBOUSTRANNY TISK
+% \documentclass[12pt,a4paper,oneside,final]{book} %% PRO JEDNOSTRANNY TISK
+\documentclass[12pt,a4paper,twoside,final]{book} %% PRO OBOUSTRANNY TISK
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ZAKLADNI NASTAVENI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%
+%% Zvolte kodovani dokumentu
+%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+% \usepackage[cp1250]{inputenc} %% NASTAVENI PRO WINDOWS
+% \usepackage[T1]{fontenc} %% puvodni evropske fonty->spatne umistene hacky nad c, d s hackem ma za sebou mezeru
+\usepackage[IL2]{fontenc} %fonty vyladene pro cestinu/slovenstinu
+
+%%%%%%%%%%%%
+%% Nastavte si jazyk dokumentu
+%% lze pouzit volbu babel (pro pdflatex a latex) nebo bez babelu (pro pdfcslatex a cslatex
+%%
+%% pri volbe bez babelu bude zlobit v ukazkovych souborech prikaz ``\shorthandoff{-}'' a ``\shorthandoff{-}''
+%% ty staci vymazat a je to bez problemu
+%%
+%% pri volbe ``\usepackage[english]{babel}'' nefunguji ceske uvozovky pomoci \uv{..} - staci nahradit ``..''
+%%%%%%%%%%%%
+
+\usepackage[czech]{babel}
+% \usepackage[slovak]{babel}
+% \usepackage[english]{babel}
+% \usepackage{czech}
+% \usepackage{slovak}
+
+%%%%%%%%%%%%
+%% Muzete si zkusit zmenit font dokumentu - pak ale musite v souboru zemnit nektera nastaveni (nebot je nastaveno
+%% \overfullrule10pt je preteceni textu ihned vyznaceno cernym obdelnikem)
+%% Veskere nastaveni je testovano pro pouzitou volbu
+%%%%%%%%%%%%
+
+% \usepackage{bookman}
+% \usepackage{charter}
+% \usepackage{fourier}
+% \usepackage{mathpazo}
+% \usepackage{newcent}
+% \usepackage{palatino}
+% \usepackage{utopia}
+\usepackage{mathptmx}  %% volne dostupny font Adobe Times Roman
+%  \usepackage[mtbold,mtplusscr,mtpluscal]{mathtime} % komercni matematicky font, dostupne pouze na UMS
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BALIKY POTREBNE PRO SABLONU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{longtable,lipsum}
+%%% balik ``longtable`` je potrebny pro sazeni kapitoly s pouzitym znacenim, jinak neni potreba
+%%% balik ``lipsum`` je pouze pro sablonu, aby se generoval nahodny text - pro samotnou praci je mozne jej odstranit
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BALIKY POTREBNE PRO MATEMATIKU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath,amssymb,amsthm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% NASTAVENI POVINNYCH CASTI DLE SMERNICE DEKANA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%
+%% NASTAVTE KONKRETNI ADAJE
+%%%%%%%%%%%%
+
+\usepackage[RNDr,Barevne]{sci.muni.thesis}
+%% Mozne volby:
+%% Bc - pro bakalarskou praci
+%% Mgr - pro diplomovou praci
+%% RNDr - pro rigorozni praci
+%% Barevne - pro dokument s barevnymi odkazy
+%% Tisk - pro dokument v cernobile barve
+
+\NazevUstavu{Geografický ústav}{Department of Geography}
+
+\RokOdevzdaniPrace{rok}
+
+\AkademickyRok{rok/rok}
+
+\Autor{Michal Zimmermann}{Michal Zimmermann}
+
+\NazevPrace{Název práce na titulní list}{Název práce}{Title of Thesis}
+%% Pokud nazev prace obsahuje nejake matematicke formule, tak je kvuli velikosti fontu pouzit prikaz \scalebox a nazev
+%% zalamat rucne - toto plati pouze pro nazev prace na titulni list
+%% {Rozbor řešení rovnice \scalebox{1.15}{${y''=f(x)\,x^{\scalebox{0.4}2}}$} s~počátečními podmínkami
+%% \scalebox{1.15}{$y(-\infty)=0$} a~\scalebox{1.15}{$y'(\infty)=0$}}
+%%
+%% pro psani druhe polozky, tj. {Název práce} je nutne mit na pameti, ze matematicke symboly nelze do zalozek v PDF
+%% vlozit - proto slouzi prikaz \texorpdfstring{toto se vysazi}{toto se vlozi do zalozek v PDF}
+%% nektere symboly vlozit lze, viz kapitolu 50 v dokumentaci
+%% http://mirrors.ctan.org/macros/latex/contrib/hyperref/hyperref.pdf
+%% viz take http://orgmode.org/worg/org-symbols.html
+%%
+
+%% \VedouciPraceSTituly{Plné jméno včetně titulů} %% Neni potreba pro rigorozni prace
+
+\StudijniProgram{Geografie}{Geography}
+
+\StudijniObor{Kartografie, geoinformatika a dálkový průzkum Země}{Cartography, Geoinformatics and Remote Sensing}
+
+\PocetStran{??\,$+$\,??}
+
+\KlicovaSlova{Klíčové slovo; Klíčové slovo; Klíčové slovo; Klíčové slovo; Klíčové slovo; Klíčové slovo;
+Klíčové slovo; Klíčové slovo}{Keyword; Keyword; Keyword; Keyword; Keyword; Keyword; Keyword;
+Keyword; Keyword}
+
+\Abstrakty%
+{V této bakalářské/diplomové/rigorózní práci se věnujeme ...}%
+{In this thesis we study ...}
+
+\TextPodekovani%
+{Na tomto místě bych chtěl(-a) poděkovat ...}
+
+\TextProhlaseni%
+{Prohlašuji, že jsem svoji bakalářskou/diplomovou/rigorózní práci vypracoval(-a) samostatně s~využitím informačních
+zdrojů, které jsou v práci citovány.}
+
+\DatumProhlaseni{xx. měsíce 20xx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% VYTVOR POMOCNY SOUBOR PRO REJSTRIK %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ZACATEK DOKUMETU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% POVINNE CASTI PRO RIGOROZNI PRACE %%%%%%%%%%%%%%%%%%%%%%%
+
+\VytvorPovinneStranyRigorozniPrace
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ABSTRAKT + ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\AbstraktyNaJedneStrane
+
+%%%%%%%%%%%%%%%%%%%%%% POKUD SE ABSTRAKTY NEVEJDOU NA JEDNU STRANU, POUZIJTE TOTO NASTAVENI %%%%%%%
+
+% \AbstraktyNaDvouStranach
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ABSTRAKT + ABSTRAKT + ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \AbstraktyNaJedneStraneSLOVENSKY
+
+%%%%%%%%%%%%%%%%%%%%%% POKUD SE ABSTRAKTY NEVEJDOU NA JEDNU STRANU, POUZIJTE TOTO NASTAVENI %%%%%%%
+
+% \AbstraktyNaViceStranachSLOVENSKY
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SEM VLOZIT ZADANI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% OSKENUJTE JEJ A VE FORMATU PDF VLOZTE DO STEJNE SLOZKY (SOUBOR POJMENUJTE NAPR. zadani.pdf) %%%
+%%%%%% PAK ''ZAPROCENTUJTE'' RADEK S \SemVlozitZadani A ODPROCENTUJTE RADEK S \VlozZadani %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\SemVlozitZadani
+
+% \VlozZadani{NazevSouboruSeZadanim}
+% \VlozZadani{zadani.pdf}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% PODEKOVANI + PROHLASENI %%%%%%%%%%%%%%%
+
+\PodekovaniAProhlaseni
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% POUZE PROHLASENI %%%%%%%%%%%%%%%%%%%
+%
+% \ProhlaseniBezPodekovani
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% OBSAH %%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark{Obsah}{Obsah}
+\VytvorObsah
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TEXT PRACE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\HlavickaUvod
+% \pdfbookmark{Úvod}{Uvod}
+\vloz{source/tex/01_Uvod}
+\cleardoublepage
+
+\HlavickaZnaceni
+% \pdfbookmark{Přehled použitého značení}{Prehled pouziteho znaceni}
+% \vloz{source/tex/02_Znaceni}
+\cleardoublepage
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter. #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection. #1}{}}
+\HlavickaKapitoly
+\vloz{source/tex/03_Kapitola_01}
+\cleardoublepage
+
+\vloz{source/tex/04_Kapitola_02}
+\cleardoublepage
+
+\vloz{source/tex/output.tex}
+\cleardoublepage
+
+\HlavickaZaver
+% \pdfbookmark{Závěr}{Zaver}
+\vloz{source/tex/05_Zaver}
+\cleardoublepage
+
+\HlavickaPriloha
+% \pdfbookmark{Příloha}{Priloha}
+%\vloz{source/tex/06_Priloha}
+\cleardoublepage
+
+\renewcommand{\bibname}{Seznam použité literatury}
+\HlavickaLiteratura
+%\vloz{source/tex/07_Literatura}
+\cleardoublepage
+
+\renewcommand{\indexname}{Rejstřík}
+\HlavickaRejstrik
+\VytvorRejstrik
+%%
+%% pro vytvoreni rejstriku se spravny ceskym razenim pouzijte
+%% csindex -d -h -k -z il2 nazev_souboru.idx
+%%
+%% nebo
+%% texindy -I latex -L czech -M lang/czech/utf8 nazev_souboru.idx
+%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% PRAZDNA STRANA NA ZAVER %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\thispagestyle{empty}
+\fancyhf{}
+\newpage
+\mbox{}
+
+\end{document}
