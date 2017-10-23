@@ -1,64 +1,74 @@
-\section{Nadpis 2}\label{nadpis-2}
-\chapter{Kapitola}
+\HlavickaUvod
+\pdfbookmark{Úvod}{Uvod} \chapter*{Úvod}
+\addcontentsline{toc}{chapter}{Úvod}
 
-\section{Nadpis}\label{nadpis}
+\begin{itemize}
 
-Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor
-sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+\item
+  motivace práce: současný stav strojově zpracovatelných prostorových
+  dat pořizovaných a poskytovaných státní správou, možnosti jejich
+  využití
+\end{itemize}
+
+\cleardoublepage
+\HlavickaKapitoly
+\setcounter{page}{1} \pagenumbering{arabic} \chapter{Cíl práce}
+
+Práce se zaměřuje na ETL procesy spojené se zpracováním vybraných
+datových sad poskytovaných státní správou České a Slovenské republiky.
+Výměnné formáty státní správy jsou často poplatné nástrojům, které
+konkrétní úřady používají při vytváření a správě dat, jejich převod do
+prostředí open source GIS nástrojů nemusí být zcela triviální
+záležitostí. Zároveň je však ETL proces naprosto nezbytným krokem k
+dalšímu využití těchto dat, neboť úřady státní správy často používají
+proprietární řešení, které další subjekty dispozici nemají.
+
+Základním cílem práce je tedy představit komplexní řešení pro zpracování
+souboru geografických informací (SGI) výměnného formátu katastru (VFK)
+poskytovaného Českým úřadem zeměměřickým a katastrálním (ČÚZK), dále pak
+formátu lesních hospodářských celků (LHC) poskytovaných Úřadem pro
+hospodářskou úpravu lesa (ÚHÚL) a rovněž výměnného formátu souborů
+geodetických informací (VGI) katastru nemovitostí poskytovaného
+Geodetickým a kartografickým ústavem Bratislava (GKÚ).
+
+Základním předpokladem k funkční implementaci těchto řešení je
+samozřejmě dokonalé pochopení zmíněných formátů. Jejich popis a
+identifikace možných úskalí je tedy rovněž jedním z cílů práce.
+
+Všechny popisované postupy jsou implementovány pomocí open source
+nástrojů. Funkční ETL procesy postavené na těchto nástrojích jsou
+obchodním tajemstvím společnosti CleverMaps, a.s., proto nejsou veřejnou
+součástí práce.
+\chapter{Prostorová data státní správy}
+
+\begin{itemize}
+
+\item
+  popsat stav, východiska (e-government?)
+\item
+  formáty (podrobněji v jednotlivých podkapitolách)
+\item
+  dostupnost dat (žádosti)
+\end{itemize}
+\chapter{ETL procesy}
+
+\begin{itemize}
+
+\item
+  co to je
+\item
+  proč se to používá
+\item
+  best practices (?)
+\item
+  co z toho lze uplatnit při zpracování vybraných dat
+\end{itemize}
+\chapter{Implementace ETL procesů}
+
+\begin{itemize}
+
+\item
+  popis workflow pro jednotlivé datové sady
+\end{itemize}
+\chapter{Popis výsledků a jejich využití}
+\chapter*{Závěr}
